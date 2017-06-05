@@ -1,6 +1,6 @@
 <template>
   <div>
-    上网
+      {{}}
   </div>
 </template>
 
@@ -8,8 +8,12 @@
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      counter:1
     }
+  },
+  mounted() {
+    alert(110)
   }
 }
+
 </script>

@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <my-header></my-header>
+    <my-header @msgs='headMsg'></my-header>
     <keep-alive>
-      <router-view></router-view>
+      <router-view @msg='headMsg'></router-view>
     </keep-alive>
   </div>
 </template>
@@ -11,16 +11,25 @@
 import header from './components/header'
 
 export default {
+  data() {
+    return {
+   }
+  },
   name: 'app',
   components:{
     'myHeader':header
+  },
+  methods:{
+    headMsg: function(data){
+      this.headWord=data;
+    }
   }
 }
 </script>
 
 <style>
-  body,html{
-    margin:0;
-    padding:0;
-  }
+ body,html{
+   margin:0;
+   padding:0;
+ }
 </style>
